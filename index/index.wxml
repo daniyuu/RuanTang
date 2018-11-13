@@ -1,10 +1,15 @@
-<scroll-view class="intro">
+<view class="intro">
   <view class='ChatPanel'>
-    <view wx:for='{{chatHistory}}'>{{item.msg}}</view>
+    <scroll-view scroll-y style="height: 90%;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+      <view wx:for='{{chatHistory}}'>{{item.msg}}</view>
+    </scroll-view>
   </view>
-  <view class='MessageSender'>
-    <input placeholder="" auto-focus bindinput='handlerInput'></input>
-    <button bindtap='handlerSend'>Send</button>
+  <view class="MessageSender" style="flex-direction:row;">
+  <view class="section">
+    <view class="flex-item"><input placeholder="" auto-focus bindinput='handlerInput'></input></view>
+    <view class="flex-item"><button bindtap='handlerSend'>Send</button></view> 
   </view>
-  
-</scroll-view> 
+  </view>
+
+
+</view> 
