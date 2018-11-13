@@ -15,10 +15,9 @@ Page({
     })
   },
   handlerSend: function(){
-    historyMessages.push(this.data.inputValue)
+    historyMessages.push({msg:this.data.inputValue })
     this.setData({
       chatHistory: historyMessages
     })
-    console.info(this.data.chatHistory)
   }
 })

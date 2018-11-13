@@ -1,6 +1,6 @@
 <scroll-view class="intro">
   <view class='ChatPanel'>
-    <view wx:for='{{chatHistory}}'>{{item}}</view>
+    <view wx:for='{{chatHistory}}'>{{item.msg}}</view>
   </view>
   <view class='MessageSender'>
     <input placeholder="" auto-focus bindinput='handlerInput'></input>
