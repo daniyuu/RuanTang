@@ -1,4 +1,10 @@
 .intro {
-  margin: 30px;
   text-align: center;
+}
+
+.MessageSender {
+  /* position: absolute; */
+  margin-top: 10%
+  /* top: 20% */
+
 }

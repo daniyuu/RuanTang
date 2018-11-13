@@ -1,1 +1,10 @@
-<view class="intro">欢迎使用代码片段，可在控制台查看代码片段的说明和文档</view>
+<scroll-view class="intro">
+  <view class='ChatPanel'>
+    <view wx:for='{{chatHistory}}'>{{item}}</view>
+  </view>
+  <view class='MessageSender'>
+    <input placeholder="" auto-focus bindinput='handlerInput'></input>
+    <button bindtap='handlerSend'>Send</button>
+  </view>
+  
+</scroll-view> 
